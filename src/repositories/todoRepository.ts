@@ -11,3 +11,9 @@ export const createTodo = async (title: string) => {
     data: { title }
   })
 }
+
+export const deleteTodo = async (id: number) => {
+  return prisma.todo.delete({
+    where: { id }
+  })
+}
